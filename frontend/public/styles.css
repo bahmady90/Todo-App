@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  
+  background: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  height: 100%;
+  font-family: "McLaren", cursive;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 20px;
+  min-height: 100px !important;
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 5px solid black;
+  height: fit-content;
+}
+
+header h1{
+  margin-top: 20px;
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+.email-p{
+  color: white;
+  position: fixed;
+  left: 70%;
+  top: 7%;
+
+
+}
+
+.navbar{
+  position: fixed;
+  left: 80%;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+    
+}
+
+
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 5px solid black;
+}
+
+footer h2 {
+  color: #fff !important;
+  font-family: "McLaren", cursive;
+  font-weight: 100;
+  
+}
+
+#gif{
+  width: fit-content;
+  height: fit-content;
+  z-index: 1;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 600px;
+  border-radius: 5%;
+  display: none;
+  
+}
+
+#gif img{
+  width: 600px;
+  height: 600px;
+  border-radius: 5%;
+}
+
+.gradient-background{
+  background: hsla(192, 95%, 50%, 1);
+  background: linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#07C8F9", endColorstr="#0D41E1", GradientType=1 );
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  background: none;  
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  height: fit-content;
+}
+
+
+
+
+.notes{
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.priority{
+  box-shadow: 0 2px 5px red; 
+  animation: vertical-shaking 0.35s infinite; 
+}
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: blue;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+  
+}
+
+.note button img{
+  background-color: none;
+  width: 40px;
+  height: 40px;
+}
+
+form.create-note {
+  margin: 10px;
+  margin-left: 0;
+  position: relative;
+  width: 480px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+.error{
+  border: 2px solid red !important;
+  border-radius: 10px !important;
+  font-weight: 1000 !important;
+}
+form.create-note button {
+  color: blue;
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 25% 75%;
+  height: 100% !important;
+  position: relative;
+  
+  
+}
+
+.stats-todo{
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 300px;
+  
+}
+
+.stats-todo p {
+  font-size: xx-large;
+  color: black;
+}
+
+
+
+
+.MuiDateTimePickerTabs-root{
+  max-width: 400px;
+  margin-left: 100px;
+}
+
+.css-1vrd5hx-MuiPickersLayout-root{
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  width: 100%;
+}
+.calendar{
+  width: 90%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.css-1rtg91x-MuiDateCalendar-root{
+  font-size: x-large;
+}
+.MuiDateTimeField-root{
+  margin-bottom: 10px;
+}
+
+/* form for login  */
+
+.formarea{
+  width: fit-content;
+  height: fit-content;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: black;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid var(--error);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 10px;
+}
+/* auth forms */
+form.signup, form.login {
+
+
+  max-width: 500px;
+  font-size: large;
+  margin: 40px auto;
+  margin-top: 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.signup h3{
+  position: relative;
+  margin-left: 200px;
+  font-size: x-large;
+  margin-top: 0;
+  
+}
+
+.login h3{
+  position: relative;
+  margin-left: 200px;
+  font-size: x-large;
+  margin-top: 0;
+  
+}
+
+/* user-home: The div the user sees once he is logged in in the Home-Page*/
+
+.user-home{
+  position: relative;
+  width: 50%;
+  height: 500px !important;
+  color: white;
+  margin-left: 20%;
+  margin-top: 2%;
+  border-radius: 20px;
+  border: 2px solid black;
+
+
+}
+
+.user-home h1{
+  position: relative;
+  margin-left: 350px;
+  margin-top: 50px !important;
+}
+
+.user-home p{
+  position: relative;
+  margin-left: 320px;
+  margin-top: 50px;
+  font-size: x-large;
+}
+
+
+
+

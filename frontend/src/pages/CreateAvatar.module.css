@@ -1,0 +1,21 @@
+.CreateAvatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: none;
+    
+}
+
+.CreateAvatar h1{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.CreateAvatar h2{
+    margin-bottom: 20px;
+}
+.avatarList{
+    display: flex;
+    width: 70%;
+    align-items: space-between;
+    justify-content: space-between;
+}

@@ -1,0 +1,91 @@
+.btn {
+  color: inherit;
+  padding: 0.8rem 1.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  font-size: 1.5rem;;
+}
+
+.primary {
+  font-weight: 700;
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--1);
+}
+
+.select {
+  font-weight: 700;
+  color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+}
+
+.submit{
+  font-weight: 100;
+  color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  margin-left: 200px;
+  width: fit-content !important;
+  height: fit-content !important;
+  margin-bottom: 20px;
+} 
+
+.back {
+  font-weight: 600;
+  background: none;
+  border: 1px solid currentColor;
+}
+
+
+.header-button{
+  background: none;
+  color: white;
+  font-size: x-large;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.logout{
+  background: none;
+  color: white;
+  font-size: x-large;
+  margin-top: 30px;
+}
+
+.app{
+  background-color: white;
+  font-size: 40px;
+  padding: 0 !important;
+  font-weight: 1000;
+  background: #A612CF;
+  background: linear-gradient(to right, #431350 0%, #f168eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
