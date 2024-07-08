@@ -5,6 +5,11 @@ const validator = require("validator");
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
+
+  record: {
+    type: Number,
+    required: false
+  },
   loginDates: {
     type: Array,
     required: true
@@ -60,11 +65,13 @@ userSchema.statics.signup = async function (email, name, password, passwordRepea
     const hash = await bcrypt.hash(password, salt);
     
     //Create LoginDates Array
-    
     let loginDates = [new Date()];
 
+    //Create user record 0 on sign up
+    let record = null;
+
     const avatar = "default.svg";
-    const user = await this.create({email, password: hash, name, avatar, loginDates})
+    const user = await this.create({email, password: hash, name, avatar, loginDates, record})
 
     return user
 }

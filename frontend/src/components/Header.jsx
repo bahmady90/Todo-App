@@ -3,14 +3,12 @@ import HighlightIcon from "@mui/icons-material/Highlight";
 import  Button  from "./Button";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import Avatar from "./Avatar";
+
 
 
 function Header() {
 
   const {user, dispatch} = useAuth();
-  // console.log(user.avatar);
-  console.log(user);
   const navigate = useNavigate();
 
 
@@ -39,7 +37,6 @@ function Header() {
       <Button type="header-button" onClick={handleClickHome}>Home</Button>
         {user ?
         <>
-          {/* <Avatar img={user.avatar}/> */}
           <div onClick={() => navigate("/avatar")}>
             <img src={user.avatar} alt="avatarimage"></img>
           </div>

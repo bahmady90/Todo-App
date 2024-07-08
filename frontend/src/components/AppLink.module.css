@@ -1,9 +1,10 @@
 .appList{
     width: 100%;
     height: 150px;
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -50,7 +51,28 @@
     color: white;
     margin: 0;
     font-size: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
 
+}
+
+.pAppList{
+    margin-bottom: 0px;
+    margin-left: 50px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#appQuizP1{
+    font-size: 30px;
+    color: blue;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    left: 70px;
+    bottom: 10px;
+    font-weight: 1000;
 }
 
 

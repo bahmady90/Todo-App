@@ -1,0 +1,39 @@
+.start{
+
+}
+
+
+.form{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.genre{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-right: 10px;
+}
+
+.amount{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-left: 0 !important;
+}
+
+.difficulty{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.start h2{
+  margin-top: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

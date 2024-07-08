@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import SignUp from '../components/SignUp';
 import Header from '../components/Header';
 import Footer from "../components/Footer";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AppList from '../components/AppList';
 
@@ -17,6 +17,7 @@ export default function Home() {
       {user ? <AppList/> :
         <SignUp/>
       }
+      
       <Footer/> 
     </div>
   )

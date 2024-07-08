@@ -8,7 +8,7 @@ export default function AppLink() {
 
   const {todos} = useTodos();
   const navigate = useNavigate();
-  console.log(todos);
+  
 
   function handleClick(){
     navigate("/todo");
@@ -20,7 +20,7 @@ export default function AppLink() {
         <img className={styles.app} src='calendar.svg'></img>
         <p id={styles.appP1}>Todo-App</p>
       </div>
-      <p id={styles.appP2}>{todos.length === 1 ? `currently ${todos.length} open Todos 🥸`: "Keep track with your schedule 📅"}</p>
+      {todos.length === 1 ? <p id={styles.appP2}>currently <span style={{color: "blue", fontSize: "25px", fontWeight: "1000"}}>{todos.length}</span> open Todos 🥸</p> : <p id={styles.appP2}>Keep track with your schedule 📅</p>}
     </div>
   )
 }

@@ -5,6 +5,8 @@ import Todo from "./pages/Todo"
 import Login from './pages/Login';
 import ProtectedRoute from './pages/ProtectedRoute';
 import CreateAvatar from './pages/CreateAvatar';
+import Quiz from "./pages/Quiz";
+import SimonGame from "./pages/SimonGame"
 
 export default function Main() {
   return (
@@ -19,6 +21,13 @@ export default function Main() {
               </ProtectedRoute>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="*" element={<Navigate to="/" />} />
+            <Route path='/quiz' element={<ProtectedRoute>
+              <Quiz/>
+              </ProtectedRoute>}/>
+            <Route path="/simon" element={<ProtectedRoute>
+              <SimonGame/>
+            </ProtectedRoute>}/>
+            
             
         </Routes>
     </BrowserRouter>

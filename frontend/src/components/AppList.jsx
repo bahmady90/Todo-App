@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useTodos } from '../context/NoteContext';
 import styles from './AppLink.module.css'
-import AppLink from './AppLink';
+import TodoLink from './TodoLink';
+import QuizLink from './QuizLink';
 
 export default function LinkList() {
 
@@ -13,11 +14,9 @@ export default function LinkList() {
   
   const thisLoginDate = new Date(loginDates[loginDates.length - 1]).getTime();
   const lastLoginDate = loginDates.length > 1 && new Date(loginDates[loginDates.length - 2]).getTime();
-  console.log(thisLoginDate);
-  console.log(lastLoginDate);
+  
   // last Login in sec
   const lastLoginTimeinMinutes = Math.round((thisLoginDate - lastLoginDate) / (1000 * 60));
-  console.log(lastLoginTimeinMinutes);
   const lastLoginTimeinHours = Math.round((thisLoginDate - lastLoginDate) / (1000 * 60 * 60));
   const lastLoginTimeinDays = Math.round((thisLoginDate - lastLoginDate) / (1000 * 60 * 60 * 24));
   const lastLoginTimeinMonths = Math.round((thisLoginDate - lastLoginDate) / (1000 * 60 * 60 * 24 * 30));
@@ -27,7 +26,7 @@ export default function LinkList() {
   return (
     <div className='user-home gradient-background'>
       <h1>Welcome {name} 😊</h1>
-      <p>
+      <p className={`${styles.pAppList}`}>
         {
           loginDates.length > 1 ?
           //conditionally rendering the last time the user logged in 
@@ -38,9 +37,11 @@ export default function LinkList() {
           : "First Login"
         }
       </p>
-      <p>Check out the Apps 👇</p>
+      <p className={`${styles.pAppList}`}>Check out the Apps 👇</p>
+      <Link to="/simon">simon</Link>
       <div className={styles.appList}>
-        <AppLink/>
+        <TodoLink/>
+        <QuizLink/>
       </div> 
     </div>
   )

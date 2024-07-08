@@ -21,14 +21,17 @@ router.post("/login", async (req, res) => {
         const user = await User.login(email, password);
         
         
-        const {name, avatar, loginDates, id} = user;
+        const {name, avatar, loginDates, id, record} = user;
+        loginDates.splice(0, (loginDates.length - 3));
+        console.log(loginDates);
         const updatedLoginDates = loginDates.concat(new Date());
-        console.log(updatedLoginDates);
+
         
 
         //create a token
         const token = createToken(user._id);
-        const updatedUser = {email, token, name, avatar, id, loginDates: updatedLoginDates}
+
+        const updatedUser = {email, token, name, avatar, id, loginDates: updatedLoginDates, record}
         await User.findOneAndUpdate({_id: id}, {...updatedUser})
         
         res.status(200).json({...updatedUser, token});
@@ -47,13 +50,13 @@ router.post("/signup", async (req, res) => {
     try{
         const user = await User.signup(email, name, password, passwordRepeat);
         console.log(user);
-        let {loginDates} = user;
+        let {loginDates, record} = user;
         const id = user._id;
         //create a token
         const token = createToken(user._id)
         
         
-        res.status(200).json({email, token, name, avatar: "default.svg", id, loginDates})
+        res.status(200).json({email, token, name, avatar: "default.svg", id, loginDates, record})
         // res.status(200).json(user);
     }catch(error){
         res.status(400).json({error: error.message})

@@ -3,12 +3,15 @@ import ReactDOM from "react-dom";
 import Main from "./Main";
 import { TodosProvider } from "./context/NoteContext";
 import { AuthProvider } from "./context/AuthContext";
+import { QuizProvider } from "./context/QuizContext";
 
 ReactDOM.render(
 
 <AuthProvider>
      <TodosProvider>
-          <Main />
+          <QuizProvider>
+               <Main />
+          </QuizProvider>
      </TodosProvider>
 </AuthProvider>
 
